@@ -1,15 +1,20 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { useLanguage, type Language } from "@/hooks/use-language"
 
 const languages = {
-  es: { name: "Español", flag: "🇪🇸" },
-  en: { name: "English", flag: "🇺🇸" },
-  fr: { name: "Français", flag: "🇫🇷" },
-  uk: { name: "Українська", flag: "🇺🇦" },
-  ru: { name: "Русский", flag: "🇷🇺" },
+  es: { name: "Español", flag: "/flags/images.png" },
+  en: { name: "English", flag: "/flags/uk.svg" },
+  fr: { name: "Français", flag: "/flags/Flag_of_France.svg.webp" },
+  uk: { name: "Українська", flag: "/flags/Flag_of_Ukraine.svg.webp" },
+  ru: { name: "Русский", flag: "/flags/Flag_of_Russia.svg" },
 }
 
 export function LanguageSelector() {
@@ -19,7 +24,11 @@ export function LanguageSelector() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="gap-2">
-          <span className="text-lg">{languages[language].flag}</span>
+          <img
+            src={languages[language].flag}
+            alt={language}
+            className="w-5 h-5 rounded-full object-cover"
+          />
           <span className="hidden sm:inline">{languages[language].name}</span>
           <span className="sm:hidden">{language.toUpperCase()}</span>
         </Button>
@@ -31,7 +40,11 @@ export function LanguageSelector() {
             onClick={() => setLanguage(code as Language)}
             className="gap-3 cursor-pointer hover:bg-primary/10"
           >
-            <span className="text-lg">{flag}</span>
+            <img
+              src={flag}
+              alt={code}
+              className="w-5 h-5 rounded-full object-cover"
+            />
             <span className="font-medium">{name}</span>
           </DropdownMenuItem>
         ))}

@@ -32,7 +32,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-background relative overflow-hidden">
+    <section id="about" className="py-20 backdrop-blur-sm bg-white/30 relative overflow-hidden">
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -63,7 +63,7 @@ export function AboutSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-3xl blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-3xl blur-sm"></div>
           <div className="relative bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 md:p-12 border border-primary/20">
             <div className="text-center mb-8">
               <div className="flex justify-center items-center gap-4 mb-6">
