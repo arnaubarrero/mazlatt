@@ -36,47 +36,13 @@ export function ContactSection() {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">{t.contact.subtitle}</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <Card className="border-0 shadow-lg bg-card/80 backdrop-blur">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-xl">
-                    <Mail className="h-5 w-5 text-primary" />
-                    {t.contact.getInTouch}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="flex items-center gap-4 p-4 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
-                    <Mail className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-medium">Email</p>
-                      <p className="text-sm text-foreground/70">info@mazlatt.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 p-4 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-medium">{t.contact.phone}</p>
-                      <p className="text-sm text-foreground/70">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 p-4 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-medium">{t.contact.location}</p>
-                      <p className="text-sm text-foreground/70">{t.contact.address}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
+          <div className="grid gap-12 max-w-[800px] mx-auto">
             <Card className="border-0 shadow-xl bg-card/80 backdrop-blur">
               <CardHeader>
                 <CardTitle className="text-center text-2xl">{t.contact.sendMessage}</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6 mx-auto">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-sm font-medium">
