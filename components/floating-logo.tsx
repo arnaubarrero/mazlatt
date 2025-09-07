@@ -12,17 +12,19 @@ export function FloatingLogo() {
   }, [])
 
   const scale = Math.min(1 + scrollY * 0.001, 3)
-  const opacity = Math.max(0.1, 1 - scrollY * 0.002)
+  // Eliminamos el cálculo de la opacidad
 
   return (
     <div
       className="fixed inset-0 flex items-center justify-center pointer-events-none z-0"
       style={{
         transform: `scale(${scale})`,
-        opacity: opacity,
+        opacity: 1,
       }}
     >
-      <div className="text-6xl sm:text-8xl md:text-9xl font-bold text-primary/10 select-none">MAZLATT</div>
+      <div className="text-6xl sm:text-8xl md:text-9xl font-bold text-primary/20 select-none">
+        MAZLATT
+      </div>
     </div>
   )
 }

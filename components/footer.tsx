@@ -14,17 +14,14 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">M</span>
-              </div>
-              <span className="font-bold text-xl">Mazlatt</span>
+              <span className="font-bold text-xl text-center">Mazlatt</span>
             </div>
             <p className="text-muted-foreground text-pretty leading-relaxed">{t.footer.description}</p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold">{t.nav.services}</h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <h3 className="font-semibold text-center">{t.nav.services}</h3>
+            <ul className="space-y-2 text-muted-foreground text-center">
               <li>{t.services.software.title}</li>
               <li>{t.services.ai.title}</li>
               <li>{t.services.training.title}</li>
@@ -32,15 +29,15 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold">Social</h3>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <h3 className="font-semibold text-center">Social</h3>
+            <div className="flex justify-center space-x-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary text-center transition-colors">
                 <Github className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="#" className="text-muted-foreground hover:text-primary text-center transition-colors">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="#" className="text-muted-foreground hover:text-primary text-center transition-colors">
                 <Twitter className="h-5 w-5" />
               </Link>
             </div>
@@ -48,7 +45,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 Mazlatt. {t.footer.rights}</p>
+          <p>&copy; {new Date().getFullYear()} Mazlatt. {t.footer.rights}</p>
         </div>
       </div>
     </footer>
