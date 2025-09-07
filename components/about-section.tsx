@@ -63,8 +63,7 @@ export function AboutSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-3xl blur-sm"></div>
-          <div className="relative bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 md:p-12 border border-primary/20">
+          <div className="relative bg-gradient-to-r from-primary/50 via-accent/50 to-primary/50 rounded-3xl p-8 md:p-12 border border-primary/20">
             <div className="text-center mb-8">
               <div className="flex justify-center items-center gap-4 mb-6">
                 <div className="p-3 rounded-full bg-primary/20">

@@ -11,12 +11,14 @@ export function Footer() {
   return (
     <footer className="bg-muted/50 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-4 flex flex-col items-center text-center">
             <div className="flex items-center space-x-2">
-              <span className="font-bold text-xl text-center">Mazlatt</span>
+              <span className="font-bold text-xl">Mazlatt</span>
             </div>
-            <p className="text-muted-foreground text-pretty leading-relaxed">{t.footer.description}</p>
+            <p className="text-muted-foreground text-pretty leading-relaxed w-[50%]">
+              {t.footer.description}
+            </p>
           </div>
 
           <div className="space-y-4">
@@ -26,21 +28,6 @@ export function Footer() {
               <li>{t.services.ai.title}</li>
               <li>{t.services.training.title}</li>
             </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="font-semibold text-center">Social</h3>
-            <div className="flex justify-center space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary text-center transition-colors">
-                <Github className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary text-center transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary text-center transition-colors">
-                <Twitter className="h-5 w-5" />
-              </Link>
-            </div>
           </div>
         </div>
 
